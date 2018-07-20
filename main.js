@@ -1,5 +1,7 @@
 //this url is from airtable the Authentification section
-var airtable_list_url='https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY';
+//var airtable_list_url='https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY';
+var airtable_list_url = 'https://api.airtable.com/v0/appSrgke7E0ElZhMY/Locations?api_key=key2m8VgwGT2iztad';
+
 //this is where we get the JSON data from Airtable
   $.getJSON( airtable_list_url, function( data ) {
     var items = [];
