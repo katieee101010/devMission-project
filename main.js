@@ -5,7 +5,7 @@ var airtable_list_url='https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?a
     var items = [];
     $.each( data.records, function( key, val ) {
       console.log(val.fields)
-      items.push(`<h2>${val.fields['Name','district']}</h2>`);
+      items.push(`<h2>${val.fields['Name']}</h2>`);
     });
     $(".list-view").append(items.join(''));
   });
