@@ -9,3 +9,11 @@ $.getJSON( airtable_list_url, function( data ) {
     });
     $(".list-view").append(items.join(''));
   });
+
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">${type of food}</h5>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
