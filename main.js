@@ -13,7 +13,6 @@ var airtable_list_url='https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?a
     return `
       <div class="card col-sm-4">
         <img src="${picture}" class="card-img-top"alt="Card image cap">
-        <div class="card-body">
           <h5 class="card-title">${TypeOfFood}</h5>
           <a href="#" class="btn btn-primary">See Details</a>
         </div>
@@ -25,7 +24,7 @@ var airtable_list_url='https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?a
       var items = [];
       $.each( data.records, function( key, val ) {
         var TypeOfFood = val.fields['type of food'];
-        var picture = val.fields['Pictures'][0] ? val.fields['Pictures'][0].url : null;
+        var picture = val.fields['picture'][0] ? val.fields['Pictures'][0].url : null;
         var html = cardTemplate(TypeOfFood, picture);
         items.push(html);
       });
