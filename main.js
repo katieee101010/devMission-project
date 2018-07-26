@@ -27,7 +27,7 @@ var airtable_list_url='https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?a
         // console.log(val.fields)
         var TypeOfFood = val.fields['type of food'];
         var picture = val.fields['Pictures'][0] ? val.fields['Pictures'][0].url : null;
-        var html = cardTemplate(name, address, picture);
+        var html = cardTemplate(TypeOfFood, picture);
         items.push(html);
       });
       $(".list-view").append(items.join(''));
