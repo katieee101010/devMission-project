@@ -9,8 +9,6 @@ $.getJSON( airtable_list_url, function( data ) {
       var fields = val.fields;
       var TypeOfFood = fields["type of food"];
       var pictureUrl = fields["picture"] ? fields["Pictures"][0].url : '';
-      var name = fields["name"];
-      var district = fields["district"];
       var itemHTML = listView(id, TypeOfFood, pictureUrl);
       html.push(itemHTML);
     });
