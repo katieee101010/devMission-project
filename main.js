@@ -54,7 +54,7 @@ $.getJSON( airtable_list_url, function( data ) {
     });
   }
 
-  var id - getParameterByName("id");
+  var id = getParameterByName("id");
 
   if (id) {
     getDataForId(id);
