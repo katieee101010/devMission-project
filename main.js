@@ -1,6 +1,20 @@
 //this url is from airtable the Authentification section
 //var airtable_list_url='https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY';
 //this is where we get the JSON data from Airtable
+var listView = function(id, TypeOfFood, pictureUrl){
+  return `<div class="col-sm-3">
+  <div class="card mb-4 box-shadow">
+    <a href="index.html?id=${id}"><img class="card-img-top" src="${pictureUrl}"></a>
+    <div class="card-body">
+      <h4><a href="index.html?id=${id}">${TypeOfFood}</a></h4>
+      <div class="d-flex justify-content-between align-items-center">
+      </div>
+    </div>
+  </div>
+</div>`;
+}
+
+var getDataForList = function(){
 $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY`, function( data ) {
     var html = [];
     html.push(`<div class="row">`);
@@ -15,6 +29,7 @@ $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyp
     html.push(`</div>`);
     $(".list-view").append(items.join(''));
   });
+}
 
   var detailView = function(id, TypeOfFood, pictureUrl){
     return `<div class="col-sm-12">
