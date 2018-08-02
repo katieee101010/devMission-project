@@ -42,7 +42,7 @@ $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyp
         <div class="d-flex justify-content-between align-items-center">
           <small class="text-muted">${address}</small>
         </div>
-        ${website ? `<a href="${website}">${website}</a>`: ``}
+        ${link ? `<a href="${link}">${link}</a>`: ``}
         <hr />
       </div>
     </div>
