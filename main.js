@@ -1,7 +1,7 @@
 //this url is from airtable the Authentification section
-var airtable_list_url='https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY';
+//var airtable_list_url='https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY';
 //this is where we get the JSON data from Airtable
-$.getJSON( airtable_list_url, function( data ) {
+$.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY`, function( data ) {
     var html = [];
     html.push(`<div class="row">`);
     $.each( data.records, function(index, val){
@@ -35,7 +35,7 @@ $.getJSON( airtable_list_url, function( data ) {
   }
 
   var getDataForId = function(id) {
-    $.getJSON( airtable_list_url, function( record ) {
+    $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY`, function( record ) {
       var html = [];
       html.push(`<div class="row">`);
         var id = record.id;
