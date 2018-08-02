@@ -9,3 +9,15 @@ $.getJSON( airtable_list_url, function( data ) {
     });
     $(".list-view").append(items.join(''));
   });
+var listView = function(id, name, picture){
+  return `<div class="col-sm-3">
+<div class="card" style="width: 18rem;">
+  <a href="?id=${id}"><img class="card-img-top" src="${picture}"></a>
+  <div class="card-body">
+   <h2><a href="?id=${id}">${typeoffood}</a></h2>
+   <div class="d-flex justify-content-between align-items-center">
+  </div>
+</div>
+</div>
+</div>`;
+}
