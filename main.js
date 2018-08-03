@@ -31,43 +31,43 @@ $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyp
   });
 }
 
-  var detailView = function(id, TypeOfFood, pictureUrl){
-    return `<div class="col-sm-12">
-    <div class="card mb-4 box-shadow">
-    <img class="card-img-top" src="${pictureUrl}">
-    <div class="card-body">
-    <h2>${TypeOfFood}</h2>
-    <p class="card-text">${name}</p>
-        <p class="card-text">${district}</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted">${address}</small>
-        </div>
-        ${link ? `<a href="${link}">${link}</a>`: ``}
-        <hr />
-      </div>
-    </div>
-  </div>`;
-  }
+  //var detailView = function(id, TypeOfFood, pictureUrl){
+    //return `<div class="col-sm-12">
+   // <div class="card mb-4 box-shadow">
+   // <img class="card-img-top" src="${pictureUrl}">
+  //  <div class="card-body">
+   // <h2>${TypeOfFood}</h2>
+   // <p class="card-text">${name}</p>
+      //  <p class="card-text">${district}</p>
+      //  <div class="d-flex justify-content-between align-items-center">
+         // <small class="text-muted">${address}</small>
+       // </div>
+        //${link ? `<a href="${link}">${link}</a>`: ``}
+       // <hr />
+      //</div>
+    //</div>
+   //</div>`;
+  //}
 
-  var getDataForId = function(id) {
-    $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY`, function( record ) {
-      var html = [];
-      html.push(`<div class="row">`);
-        var id = record.id;
-        var fields = record.fields;
-        var TypeOfFood = fields["type of food"];
-        var name = fields["name"];
-        var pictureUrl = fields["picture"] ? fields["picture"][0].url : '';
-        var district = fields["district"];
-        var address = fields["address"];
-        var link = fields["link to yelp"];
+  //var getDataForId = function(id) {
+    //$.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY`, function( record ) {
+      //var html = [];
+      //html.push(`<div class="row">`);
+        //var id = record.id;
+        //var fields = record.fields;
+        //var TypeOfFood = fields["type of food"];
+        //var name = fields["name"];
+        //var pictureUrl = fields["picture"] ? fields["picture"][0].url : '';
+        //var district = fields["district"];
+        //var address = fields["address"];
+        //var link = fields["link to yelp"];
   
-        var itemHTML = detailView(id, TypeOfFood, name, pictureUrl, district, address, link);
-        html.push(itemHTML);
-      html.push(`</div>`);
-      $(".detail-view").append(html.join(""));
-    });
-  }
+        //var itemHTML = detailView(id, TypeOfFood, name, pictureUrl, district, address, link);
+        //html.push(itemHTML);
+      //html.push(`</div>`);
+      //$(".detail-view").append(html.join(""));
+    //});
+  //}
   //var getParameterByName = function(name, url) {
     //if (!url) url = window.location.href;
     //name = name.replace(/[\[\]]/g, "\\$&");
