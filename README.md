@@ -1,4 +1,4 @@
 # devMission-project
-#1. choose the type of food 
-#2. pick random type of food
-#3. submit ?
+1. choose the type of food 
+2. pick random type of food
+3. submit ?
