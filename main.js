@@ -79,8 +79,8 @@ $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyp
 
   //var id = getParameterByName("id");
 
-  if (id) {
-    getDataForId(id);
-  } else {
-    getDataForList();
-  }
+ // if (id) {
+   // getDataForId(id);
+  //} else {
+   // getDataForList();
+  //}
