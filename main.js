@@ -22,7 +22,7 @@ $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyp
       var id = val.id;
       var fields = val.fields;
       var TypeOfFood = fields["type of food"];
-      var pictureUrl = fields["picture"] ? fields["Pictures"][0].url : '';
+      var pictureUrl = fields["picture"] ? fields["picture"][0].url : '';
       var itemHTML = listView(id, TypeOfFood, pictureUrl);
       html.push(itemHTML);
     });
@@ -57,7 +57,7 @@ $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyp
         var fields = record.fields;
         var TypeOfFood = fields["type of food"];
         var name = fields["name"];
-        var pictureUrl = fields["picture"] ? fields["Pictures"][0].url : '';
+        var pictureUrl = fields["picture"] ? fields["picture"][0].url : '';
         var district = fields["district"];
         var address = fields["address"];
         var link = fields["link to yelp"];
