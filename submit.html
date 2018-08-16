@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Submit food place in sf</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading"><a href="index.html">What is your favorite food place in sf?</a></h1>
+        </div>
+    </section>
+
+    <div class="container submit-view">
+        <form id="submit location">
+                <div class="form-group">
+                        <label for="name">Name of place</label>
+                        <input required type="text" class="form-control" id="name">
+                      </div>
+                      <div class="form-group">
+                            <label for="foods">Type of food</label>
+                            <select class="form-control" id="foods">
+                              <option>American</option>
+                              <option>Breakfast/ Brunch</option>
+                              <option>Chinese</option>
+                              <option>Greek</option>
+                              <option>Ice Cream</option>
+                              <option>Indian</option>
+                              <option>Italian</option>
+                              <option>Japanese</option>
+                              <option>Korean</option>
+                              <option>Mexican</option>
+                              <option>Pizza</option>
+                              <option>Thai</option>
+                              <option>Vietnamese</option>
+                            </select>
+                          </div>
+                      <div class="form-group">
+                        <label for="address">Address</label>
+                        <input required type="text" class="form-control" id="address">
+                      </div>
+                      <div class="form-group">
+                            <label for="district">District</label>
+                            <select class="form-control" id="district">
+                              <option>Mission</option>
+                              <option>Excelsior</option>
+                              <option>Financial District</option>
+                              <option>SoMA</option>
+                              <option>Suny Side</option>
+                              <option>Sunset</option>
+                              <option>Parkside</option>
+                              <option>Lower Nob Hill</option>
+                              <option>Lower Pacific Heights</option>
+                              <option>Hayes Valley</option>
+                              <option>Cole Valley</option>
+                              <option>Tenderloin</option>
+                              <option>North Beach/ Telegraph Hill</option>
+                              <option>Richmond</option>
+                              <option>Glen Park</option>
+                              <option>Marina</option>
+                            </select>
+                          </div>
+                      <div class="form-group">
+                        <label for="yelp">Link to Yelp</label>
+                        <input required type="url" class="form-control" id="yelp">
+                      </div>
+                      <div class="form-group">
+                        <label for="picture">Picture URL</label>
+                        <input required type="url" class="form-control" id="picture">
+                      </div>
+            
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">submit</button>
+                    </form>
+            
+              </div>
+            
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+              <script src="helper.js"></script>
+              <script src="submit.js"></script>
+            </body>
+            </html>

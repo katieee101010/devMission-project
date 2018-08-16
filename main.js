@@ -12,10 +12,10 @@ var getParameterByName = function(name, url) {
 
 var api_key = 'keyppYGfrsTMTEfnY';
 
-var listView = function(id, TypeOfFood, coverPic){
+var listView = function(id, TypeOfFood, cover){
   return `<div class="col-sm-3">
   <div class="card mb-4 box-shadow">
-    <a href="index.html?id=${id}"><img class="card-img-top" src="${coverPic}"></a>
+    <a href="index.html?id=${id}"><img class="card-img-top" src="${cover}"></a>
     <div class="card-body">
       <h4><a href="index.html?id=${id}">${TypeOfFood}</a></h4>
       <div class="d-flex justify-content-between align-items-center">
@@ -33,8 +33,8 @@ $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyp
       var id = val.id;
       var fields = val.fields;
       var TypeOfFood = fields["foods"];
-      var pictureUrl = fields["picture"] ? fields["picture"][0].url : '';
-      var itemHTML = listView(id, TypeOfFood, pictureUrl);
+      var cover = fields["cover"] ? fields["cover"][0].url : '';
+      var itemHTML = listView(id, TypeOfFood, cover);
       html.push(itemHTML);
     });
     html.push(`</div>`);
