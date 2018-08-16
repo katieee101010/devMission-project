@@ -12,6 +12,13 @@ var getParameterByName = function(name, url) {
 
 var api_key = 'keyppYGfrsTMTEfnY';
 
+$('.jumbotron button').on("click", function(e) {
+  e.preventDefault();
+  var links = $('.card a');
+  var random = Math.floor(Math.random() * links.length);
+  $('.card a').eq(random).click();
+});
+
 var listView = function(id, TypeOfFood, cover){
   return `<div class="col-sm-3">
   <div class="card mb-4 box-shadow">
