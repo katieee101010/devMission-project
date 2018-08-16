@@ -12,7 +12,11 @@ $("#submit-location").on('submit', function(e){
           'url': $(this).find('#picture').val()
         }
       ],
-
+      'cover': [
+        {
+          'url': $(this).find('#cover').val()
+        }
+      ],
     };
     $.post(`https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY`,
       data, function () {
