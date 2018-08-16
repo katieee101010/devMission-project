@@ -1,0 +1,8 @@
+.jumbotron {
+    margin-bottom: 10px;
+    background-image: url(https://background-tiles.com/overview/red/patterns/large/1045.png);
+    width: 100%;
+    height: 350px; 
+    color: white;
+    text-shadow: black 0.2em 0.2em 0.2em;
+}
