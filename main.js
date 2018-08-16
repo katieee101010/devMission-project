@@ -1,7 +1,7 @@
 // this url is from airtable the Authentification section
 // var airtable_list_url='https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyppYGfrsTMTEfnY';
 // this is where we get the JSON data from Airtable
-var getParameterByName = function(name, url) {
+var getParameterByName = function(name, url) { 
   if (!url) url = window.location.href;
   name = name.replace(/[\[\]]/g, "\\$&");
   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"), results = regex.exec(url);
@@ -11,13 +11,6 @@ var getParameterByName = function(name, url) {
 }
 
 var api_key = 'keyppYGfrsTMTEfnY';
-
-$('.jumbotron button').on("click", function(e) {
-  e.preventDefault();
-  var links = $('.card a');
-  var random = Math.floor(Math.random() * links.length);
-  $('.card a').eq(random).click();
-});
 
 var listView = function(id, TypeOfFood, cover){
   return `<div class="col-sm-3">
@@ -95,3 +88,10 @@ $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyp
   } else {
    getDataForList();
   }
+
+  $('.jumbotron button').on("click", function(e) {
+    e.preventDefault();
+    var links = $('.card a');
+    var random = Math.floor(Math.random() * links.length);
+    $('.card a').eq(random).click();
+  });
