@@ -89,9 +89,9 @@ $.getJSON( `https://api.airtable.com/v0/appYyE1ErirB57dsj/Table%201?api_key=keyp
    getDataForList();
   }
 
-  $('.jumbotron button').on("click", function(e) {
+  $('.jumbotron .btn').on("click", function(e) {
     e.preventDefault();
     var links = $('.card a');
-    var random = Math.floor(Math.random() * links.length);
-    $('.card a').eq(random).click();
+    var random = Math.floor(Math.random() * links.length);    
+    window.location = $('.card a').eq(random).attr('href');
   });
